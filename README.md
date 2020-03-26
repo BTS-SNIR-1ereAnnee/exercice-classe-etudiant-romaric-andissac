@@ -27,3 +27,8 @@ Note sur 10
 Sylvain : 15/20,5/10
 moyenne: 12.5
 ```
+
+```
+g++ main.cpp eleve.cpp -o ~/Documents/exercice-classe-etudiant-romaric-andissac/bin/executable
+
+
