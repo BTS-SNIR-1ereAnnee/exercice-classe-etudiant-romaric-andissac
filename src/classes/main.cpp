@@ -18,10 +18,12 @@ int main()
     cin >> note2;
      
     Eleve eleve;
-     
+    eleve.setnomEleve(nomEleve);
     eleve.setnote1(note1);
     eleve.setnote2(note2); 
     
+    //cout << eleve.getnomEleve() << " : ";
+    eleve.afficheNom();
     eleve.afficherNote();
     cout << "moyenne = " << eleve.moyenne() << endl;
     

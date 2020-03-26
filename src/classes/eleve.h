@@ -16,11 +16,14 @@ class Eleve
         
         Eleve(std::string nomEleve, int note1, int note2);
         
+        /*Destructeur*/
+        ~Eleve();
+        
         /*Mutateur pour modifier la donnée privée m_nomEleve*/
         void setnomEleve(std::string nomEleve);
         
-        /*Accesseur pour nomEleve*/
-        std::string getnomEleve();
+        /*Accesseur pour nomEleve
+        std::string getnomEleve();*/
         
         /*Mutateur pour modifier les donnnées privées m_note1 et m_note2*/
         void setnote1(int note);
@@ -35,6 +38,8 @@ class Eleve
         
         /*Affiche la moyenne des notes*/
         float moyenne();
+        
+        void afficheNom();
 };
 
 #endif
