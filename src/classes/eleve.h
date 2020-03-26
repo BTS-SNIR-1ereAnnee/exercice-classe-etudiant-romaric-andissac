@@ -1,12 +1,11 @@
 #include <iostream>
 #include <string>
 
-class eleve
+class Eleve
 {
     private:
     public:
-        eleve();
-        std::string nomEleve();
+        Eleve();
         int note1();
         int note2();
 };
