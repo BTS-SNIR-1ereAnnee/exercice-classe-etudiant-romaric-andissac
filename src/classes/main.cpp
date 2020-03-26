@@ -17,8 +17,13 @@ int main()
     cout << "Entrez la deuxième note sur 10 : ";
     cin >> note2;
      
-     Eleve eleve;
+    Eleve eleve;
+     
+    eleve.setnote1(note1);
+    eleve.setnote2(note2); 
     
-    cout << "\n" << nomEleve << " : " << note1 << "/20, " <<  note2 << "/10" << endl;
-    cout << "moyenne" << " : " << moyenne << endl;
+    eleve.afficherNote();
+    cout << "moyenne = " << eleve.moyenne() << endl;
+    
+    return 0;
 }
