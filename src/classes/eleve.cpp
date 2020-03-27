@@ -11,11 +11,11 @@ Eleve::Eleve()
 }
 
 
-Eleve::Eleve(std::string nomEleve, int note1, int note2)
+Eleve::Eleve(std::string nomEleve, int noteSur20, int noteSur10)
 {
     this->setnomEleve(nomEleve);
-    this->setnote1(note1);
-    this->setnote2(note2);
+    this->setnoteSur20(noteSur20);
+    this->setnoteSur10(noteSur10);
 }
 
 Eleve::~Eleve()
@@ -28,45 +28,40 @@ void Eleve::setnomEleve(std::string nomEleve)
     m_nomEleve = nomEleve;
 }
 
-/*std::string getnomEleve()     
+void Eleve::setnoteSur20(int note)
 {
-    return m_nomEleve;      Je ne comprend pas pourquoi avec cette méthode m_nomEleve était pas déclaré mais à la ligne 68 quand j'ai créé la méthode afficheNom, là m_nomEleve était reconnu 
-}*/
-
-void Eleve::setnote1(int note)
-{
-    m_note1 = note;
+    m_note[0]= note;
 }
  
-void Eleve::setnote2(int note)
+void Eleve::setnoteSur10(int note)
 {
-    m_note2 = note;
+    m_note[1]= note;
 }
 
-int Eleve::getnote1()
+int Eleve::getnoteSur20()
 {
-    return m_note1;
+    return m_note[0];
 }
     
-int Eleve::getnote2()
+int Eleve::getnoteSur10()
 {
-    return m_note2;
+    return m_note[1];
 }
 
 /* Me permet d'afficher les notes de l'élève séparé par une virgule -> ex: 15/20, 5/10 */        
-void Eleve::afficherNote()
+void Eleve::afficheLesNote()
 {
-    cout << m_note1 << "/20" << ", " << m_note2 << "/10" << endl;
+    cout << m_note[0] << "/20" << ", " << m_note[1] << "/10" << endl;
 }
 
 /* Retourne la valeur moyenne qui est calculé ci-dessous, j'ai mis du temps avant de me dire de mettre (float) car mon resultat était toujours 12 en moyene avec 15/20 et 5/10 */        
-float Eleve::moyenne()
+float Eleve::calulerMoyenne()
 {
-    return ((float)m_note1 + ((float)m_note2 * 2))/2;
+    return ((float)m_note[0] + ((float)m_note[1] * 2))/2;
 }
 
 /* méthode afficheNom pour pouvoir afficher le nom de l'éleve */
-void Eleve::afficheNom()
+void Eleve::afficheLeNomEleve()
 {
     cout << m_nomEleve << " : ";
 }
