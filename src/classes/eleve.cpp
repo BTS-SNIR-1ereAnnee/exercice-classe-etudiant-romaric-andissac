@@ -4,12 +4,11 @@
 
 using namespace std;
 
-/*Constructeur*/
+
 Eleve::Eleve()
 {
     
 }
-
 
 Eleve::Eleve(std::string nomEleve, int noteSur20, int noteSur10)
 {

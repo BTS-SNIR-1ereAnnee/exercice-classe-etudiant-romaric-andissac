@@ -17,9 +17,10 @@ class Eleve
     
     public:
     
-        /* Constructeur */
+        /* Constructeur par default */
         Eleve();
         
+        /* Constructeur */
         Eleve(std::string nomEleve, int noteSur20, int noteSur10);
         
         /* Destructeur */
